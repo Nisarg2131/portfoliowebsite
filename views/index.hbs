@@ -1,3 +1,4 @@
+{{!-- bootstrap classes used to develop structure --}}
 <div
   class=".container-md p-5 m-5 rounded"
   style="background-color: darkgoldenrod ;"
@@ -43,31 +44,16 @@
 
 <div class="container p-5" style="width: 80%; margin: 10px auto;">
   <h2 class="p-3 m-3 text-center container">Projects i have worked on.......</h2>
-  <div class="row">
+  <div class="row m-4">
+    {{#each projects}}
     <div class="col">
-      <img src="/images/laptop-g07bca914f_1280.png" width="300px" alt="" />
-      <h4 style="margin-top: 20px;">Weather Application
+      <img src={{projectImage}} width="300px" alt="" />
+      <h4 style="margin-top: 20px;">{{this.projectName}}
       </h4>
-      <p>A web-app based on Express and React which have beautiful graphis to
-        show weather.
+      <p>{{this.projectDescription}}
       </p>
     </div>
-    <div class="col">
-      <img src="/images/laptop-g07bca914f_1280.png" width="300px" alt="" />
-      <h4 style="margin-top: 20px;">ToDo Web app
-      </h4>
-      <p>A web-app based on Express and React which stores the tasks you have to
-        do.
-      </p>
-    </div>
-    <div class="col">
-      <img src="/images/laptop-g07bca914f_1280.png" width="300px" alt="" />
-      <h4 style="margin-top: 20px;">Shopping Website
-      </h4>
-      <p>Build with node and react with a fully scalable architecture and
-        customizable dashboard.
-      </p>
-    </div>
+    {{/each}}
   </div>
 </div>
 <br />
